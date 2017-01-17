@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="0px">
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_margin="0px"
+        android:titleTextColor="@color/white"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Details"
+            android:paddingLeft="5px"
+            android:paddingTop="15px"
+            android:textSize="25dp"
+            />
+    </android.widget.Toolbar>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+
+        android:padding="30px"
+        android:text="More details for La, CA"
+        android:textSize="55px"
+        android:textColor="@color/black"
+        android:id="@+id/head"/>
+
+    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="30px">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10px"
+            >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="500px"
+                android:layout_height="80px"
+                android:layout_marginBottom="40px"
+                android:background="#c9ccd6"/>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            </FrameLayout>
+            </ScrollView>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

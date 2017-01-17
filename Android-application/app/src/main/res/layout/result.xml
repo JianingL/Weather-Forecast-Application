@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/result">
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_margin="0px"
+        android:titleTextColor="@color/white"
+        android:background="@color/black">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:text="Result"
+            android:paddingLeft="5px"
+            android:paddingTop="15px"
+            android:textSize="25dp"
+            />
+    </android.widget.Toolbar>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40px"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15px"
+            android:text="MORE DETAILS"
+            android:id="@+id/details"
+            android:onClick="goToDetails"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15px"
+            android:text="VIEW MAP"
+            android:id="@+id/goMap"
+            android:onClick="goToMap"
+            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25px">
+            <com.facebook.share.widget.ShareButton
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:background="@color/white"
+                android:id="@+id/fb_share_button">
+            </com.facebook.share.widget.ShareButton>
+
+            <ImageView
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fb_icon"
+                >
+            </ImageView>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="230px"
+                android:padding="10px"
+                android:scaleType="fitCenter"
+                android:id="@+id/resultIcon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="38px"
+                android:textColor="@color/black"
+                android:text="Clear in Los Angeles, CA"
+                android:id="@+id/resultSummary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="110px"
+                android:textColor="@color/black"
+                android:text="68"
+                android:id="@+id/resultTemp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/font_size1"
+                android:textColor="@color/black"
+                android:text="L: 48 | H: 71"
+                android:id="@+id/resultLH" />
+
+            <TableLayout
+                android:layout_width="650px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60px"
+                android:stretchColumns="*"
+
+                >
+                <TableRow>
+                    <TextView
+                        android:text="precipitation:"
+                        android:textSize="40px"
+                        />
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/precipitation"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Chance of Rain:"
+                        android:textSize="40px"
+                        />
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/chance"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Wind Speed:"
+                        android:textSize="40px" />
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/wind"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Dew Point: "
+                        android:textSize="40px"/>
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/dew"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Humidity: "
+                        android:textSize="40px"
+                        />
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/humidity"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Visibility: "
+                        android:textSize="40px"/>
+
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/visibility"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Sunrise: "
+                        android:textSize="40px"/>
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/sunrise"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="Sunset: "
+                        android:textSize="40px"/>
+                    <TextView
+                        android:text="N/A"
+                        android:textSize="40px"
+                        android:gravity="right"
+                        android:id="@+id/sunset"/>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
